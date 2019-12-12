@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Functional_programs
 {
-   public class PallindromAnagram
+   public class PrimePallindrom
     {
         public void PallPrime()
         {

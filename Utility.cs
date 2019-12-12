@@ -1,6 +1,101 @@
 ﻿using System;
 public class Utility
 {
+    /* ******************************************  Start Find day of Week ******************************************/
+    public static void primeAngram(int range)
+    {
+        bool result;
+        int temp = 0;
+        int temp1;
+        for (int no = 1; no <= range; no++)
+        {
+            temp1 = no;
+
+            for (int j = 2; j < no - 1; j++)
+            {
+                if (no % j == 0)
+                {
+                    temp = temp + 1;
+                }
+            }
+            string str1 = temp1 + "";
+            string str2 = no + "";
+            result = IsAnagram(str1, str2);
+
+
+            if (temp == 0 || result==true)
+            {
+                Console.WriteLine(no +"   " +temp1);
+
+            }
+            else
+            {
+                temp = 0;
+            }
+        }
+    }
+
+
+
+  
+
+    /* ******************************************  Start Find day of Week ******************************************/
+    /* ******************************************  Start Find day of Week ******************************************/
+    public static void DuplicatElement(int[] arr)
+    {
+        for (int i = 0; i <arr.Length-1; i++)
+        {
+            if (arr[i]== arr[i + 1])
+            {
+                Console.WriteLine(arr[i]);
+            }
+        }
+    }
+
+        /* ******************************************  Start Find day of Week ******************************************/
+
+    /* ******************************************  Start Find day of Week ******************************************/
+
+    public static string FindDayOfWeek(int d, int m, int y)
+    {
+        string[] day = { "Sunday", "Monday", "Thuesday", "Wednesday", "Thursday", "Friday", "Sarturday" };
+        int y0 = y - (14 - m) / 12;
+        int x = y0 + (y0 / 4) - (y0 / 100) + (y0 / 400);
+        int m0 = m + 12 * ((14 - m) / 12) - 2;
+        int d0=(d+x+31*m0/12)% 7;
+        return day[d0];
+    }
+
+    //******************************************  End Find Day of Week ******************************************/
+
+
+
+    //******************************************  Start Vending Machine ******************************************/
+    public static int collectMponey(int change, int[] rupees, int n, int money)
+    {
+
+        if (change== 0)
+            return money;
+        else
+        {
+            if (change > rupees[n - 1])
+            {
+                change = change - rupees[n - 1];
+                money++;
+                Console.WriteLine(rupees[n - 1]);
+                return collectMponey(change, rupees, n, money);
+            } else
+            {
+                n=n-1;
+               return collectMponey(change, rupees, n, money);
+            }
+        }
+    }
+
+    //****************************************** End Vending Machine ******************************************/
+
+
+
     //******************************************  Start Max_Min of the array ******************************************/
 
     public static int Max(int[] arr)
@@ -362,34 +457,29 @@ public class Utility
     public static void Pallindromprime(int N)
     {
         int temp=0,rev=0,b;
-        int original,primeOriginal;
+        int temp1;
+        bool result=true;
         for (int no = 10; no <= N; no++)
         {
+            temp1 = no;
+            
 
-            original = no;
 
             for (int j = 2; j <= no - 1; j++)
             {
-                original = no;
-                //  Console.WriteLine(original);
+                    
 
-                primeOriginal = no;
-                // Console.WriteLine(primeOriginal);
-
-                if (primeOriginal % j == 0) {
+                if (no % j == 0) {
                    
                     temp = temp + 1;
                 }
 
-            } while (no != 0)
-            {
-                b = no % 10;
-                rev = rev * 10 + b;
-                no = no / 10;
             }
 
+            result=pallindrom(temp1);
 
-            if (temp == 0 && rev == original)
+
+            if (temp == 0 && result==true)
             {
                 Console.WriteLine(no);
             }
@@ -397,7 +487,9 @@ public class Utility
             {
                 temp = 0;
             }
-           
+
+
+
 
         }
 
@@ -427,7 +519,7 @@ public class Utility
              Array.Sort(ch1);
               Array.Sort(ch2);
 
-           result=Array.Equals(ch1, ch1);
+            result=Array.Equals(ch1, ch1);
 
             return result;
         }
@@ -748,7 +840,7 @@ public class Utility
 
     /* ****************************************  Start Pallindrom Number  *****************************  */
 
-   public bool pallindrom(int N)
+   public static bool pallindrom(int N)
     {
         int Original = N;
         int temp, rev=0;

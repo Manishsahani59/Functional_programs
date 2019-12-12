@@ -12,7 +12,7 @@ namespace Functional_programs
             bool result;
             Console.WriteLine("Enter the value to check ---->");
             int value = Convert.ToInt32(Console.ReadLine());
-            result=utility.pallindrom(value);
+            result=Utility.pallindrom(value);
             if (result)
             {
                 Console.WriteLine(value + " is Pallindrom No");

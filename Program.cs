@@ -9,43 +9,51 @@ namespace Functional_programs
         {
             // string value;
             // int choice;
-         
-                Console.WriteLine("Enter The Your Choice   ");
-                Console.WriteLine("Enter :: 1 :: for check Year Leap year or not ");
-                Console.WriteLine("Enter :: 2 :: for Quadratic Equation");
-                Console.WriteLine("Enter :: 3 :: for Eculidiean Distance ");
-                Console.WriteLine("Enter :: 4 :: for Distincit Triplates ");
-                Console.WriteLine("Enter :: 5 :: for Gambler");
-                Console.WriteLine("Enter :: 6 :: for Prime Factor ");
-                Console.WriteLine("Enter :: 7 :: for Harmonic Series ");
-                Console.WriteLine("Enter :: 8 :: for Poewr of Two ");
-                Console.WriteLine("Enter :: 9 :: for Replace of string ");
-                Console.WriteLine("Enter :: 10 :: for Factorial ");
-                Console.WriteLine("Enter :: 11 :: for Fibonacci Series ");
-                Console.WriteLine("Enter :: 12 :: for check Pallindrom ");
-                Console.WriteLine("Enter :: 13 :: for Flip Coins ");
-                Console.WriteLine("Enter :: 14 :: for Check Prime Or Not ");
-                Console.WriteLine("Enter :: 15 :: for Primne In between ");
-                Console.WriteLine("Enter :: 16 :: for Reverse of String  ");
-                Console.WriteLine("Enter :: 17 :: for Anagram Detection ");
-                Console.WriteLine("Enter :: 18 :: for Pallindrom Anagram");
-                Console.WriteLine("Enter :: 19 :: for Binary Search");
-                Console.WriteLine("Enter :: 20 :: for Insertion Sort");
-                Console.WriteLine("Enter :: 21 :: for Bubble Sort");
-                Console.WriteLine("Enter :: 22 :: for Sqrt Using Netwons Method");
-                Console.WriteLine("Enter :: 23 :: for Tempratur Conversion");
-                Console.WriteLine("Enter :: 24 :: for monthly Payment");
-                Console.WriteLine("Enter :: 25 :: for Decimat to Binary");
-                Console.WriteLine("Enter :: 26 :: for Swap Nibbles And Find Resultant Number ");
-                Console.WriteLine("Enter :: 27 :: for Reverse of the word ");
-                Console.WriteLine("Enter :: 28 :: for Print Initials i.e Enter Mahatama Gandhi Find M.Gandhi ");
-                Console.WriteLine("Enter :: 29 :: for Permutaion of the String ");
-                Console.WriteLine("Enter :: 30 :: for Max and Min value in The array  ");
 
-            Console.WriteLine("If You To Exit Y");
+            char input;
+            do
+            {
+                Console.WriteLine("Enter The Your Choice   ");
+                Console.WriteLine("Enter :: 0 ::  Exit");
+                Console.WriteLine("Enter :: 1 ::  check Year Leap year or not ");
+                Console.WriteLine("Enter :: 2 ::  Quadratic Equation");
+                Console.WriteLine("Enter :: 3 ::  Eculidiean Distance ");
+                Console.WriteLine("Enter :: 4 ::  Distincit Triplates ");
+                Console.WriteLine("Enter :: 5 ::  Gambler");
+                Console.WriteLine("Enter :: 6 ::  Prime Factor ");
+                Console.WriteLine("Enter :: 7 ::  Harmonic Series ");
+                Console.WriteLine("Enter :: 8 ::  Power of Two ");
+                Console.WriteLine("Enter :: 9 ::  Replace of string ");
+                Console.WriteLine("Enter :: 10 ::  Factorial ");
+                Console.WriteLine("Enter :: 11 ::  Fibonacci Series ");
+                Console.WriteLine("Enter :: 12 ::  check Pallindrom ");
+                Console.WriteLine("Enter :: 13 ::  Flip Coins ");
+                Console.WriteLine("Enter :: 14 ::  Check Prime Or Not ");
+                Console.WriteLine("Enter :: 15 ::  Primne In between ");
+                Console.WriteLine("Enter :: 16 ::  Reverse of String  ");
+                Console.WriteLine("Enter :: 17 ::  Anagram Detection ");
+                Console.WriteLine("Enter :: 18 ::  Pallindrom Anagram");
+                Console.WriteLine("Enter :: 19 ::  Binary Search");
+                Console.WriteLine("Enter :: 20 ::  Insertion Sort");
+                Console.WriteLine("Enter :: 21 ::  Bubble Sort");
+                Console.WriteLine("Enter :: 22 ::  Sqrt Using Netwons Method");
+                Console.WriteLine("Enter :: 23 ::  Tempratur Conversion");
+                Console.WriteLine("Enter :: 24 ::   monthly Payment");
+                Console.WriteLine("Enter :: 25 ::  Decimat to Binary");
+                Console.WriteLine("Enter :: 26 ::  Swap Nibbles And Find Resultant Number ");
+                Console.WriteLine("Enter :: 27 ::  Reverse of the word ");
+                Console.WriteLine("Enter :: 28 ::  Print Initials i.e Enter Mahatama Gandhi Find M.Gandhi ");
+                Console.WriteLine("Enter :: 29 ::  Permutaion of the String ");
+                Console.WriteLine("Enter :: 30 ::  Max and Min value in The array  ");
+                Console.WriteLine("Enter :: 31 ::  Collect Chanange Money or Vending Machine Problem ");
+                Console.WriteLine("Enter :: 32 ::  Find The day of the Week ");
+                Console.WriteLine("Enter :: 33 ::  Find Duplicate ");
+                Console.WriteLine("Enter :: 34 ::  Find Prime Anagram ");
+
                 int choice = Convert.ToInt32(Console.ReadLine());
                 switch (choice)
                 {
+                   
                     case 1:
                         LeapYear leapyear = new LeapYear();
                         leapyear.IsLeapYear();
@@ -125,83 +133,98 @@ namespace Functional_programs
                         RevS.ReverseString();
                         break;
 
-                case 17:
-                    AnagramDetection Anagram = new AnagramDetection();
-                    Anagram.AnagramString();
-                    break;
+                    case 17:
+                        AnagramDetection Anagram = new AnagramDetection();
+                        Anagram.AnagramString();
+                        break;
 
 
-                case 18:
-                    PallindromAnagram PA = new PallindromAnagram();
-                    PA.PallPrime();
-                    break;
+                    case 18:
+                        PrimePallindrom PA = new PrimePallindrom();
+                        PA.PallPrime();
+                        break;
 
 
-                case 19:
-                    BinarySearch bS = new BinarySearch();
-                    bS.Binarysearch();
-                    break;
+                    case 19:
+                        BinarySearch bS = new BinarySearch();
+                        bS.Binarysearch();
+                        break;
 
-                case 20:
-                    InsertionSort INS = new InsertionSort();
-                    INS.Insertionsort();
-                    break;
-                case 21:
-                    Bubblesort buS = new Bubblesort();
-                    buS.bubblesort();
-                    break;
+                    case 20:
+                        InsertionSort INS = new InsertionSort();
+                        INS.Insertionsort();
+                        break;
+                    case 21:
+                        Bubblesort buS = new Bubblesort();
+                        buS.bubblesort();
+                        break;
 
-                case 22:
-                    sqrtusingNetwonsMethod netwons = new sqrtusingNetwonsMethod();
-                    netwons.netwonmethod();
-                    break;
-                case 23:
-                    TempraturConversion tempconversion = new TempraturConversion();
-                    tempconversion.tempratureConversion();
-                    break;
-                case 24:
-                    MonthlyPayment mp = new MonthlyPayment();
-                    mp.monthlyPayemnt();
-                    break;
-                    
-                case 25:
-                    DecimalToBinary DToB = new DecimalToBinary();
-                    DToB.DecimalTobinary();
-                    break;
-                case 26:
-                    swapNibbles spn = new swapNibbles();
-                    spn.swapnibble();
-                    break;
-                case 27:
-                    ReverseOfword revW = new ReverseOfword();
-                    revW.ReverseofWord();
-                    break;
-                case 28:
-                    PrintInitials Printinit = new PrintInitials();
-                    Printinit.printinitilas();
-                    break;
-                case 29:
-                    PermutationofString permution = new PermutationofString();
-                    permution.permutation();
-                    break;
-                case 30:
-                    Max_min minmax = new Max_min();
-                    minmax.Max_MIn();
-                    break;
+                    case 22:
+                        sqrtusingNetwonsMethod netwons = new sqrtusingNetwonsMethod();
+                        netwons.netwonmethod();
+                        break;
+                    case 23:
+                        TempraturConversion tempconversion = new TempraturConversion();
+                        tempconversion.tempratureConversion();
+                        break;
+                    case 24:
+                        MonthlyPayment mp = new MonthlyPayment();
+                        mp.monthlyPayemnt();
+                        break;
+
+                    case 25:
+                        DecimalToBinary DToB = new DecimalToBinary();
+                        DToB.DecimalTobinary();
+                        break;
+                    case 26:
+                        swapNibbles spn = new swapNibbles();
+                        spn.swapnibble();
+                        break;
+                    case 27:
+                        ReverseOfword revW = new ReverseOfword();
+                        revW.ReverseofWord();
+                        break;
+                    case 28:
+                        PrintInitials Printinit = new PrintInitials();
+                        Printinit.printinitilas();
+                        break;
+                    case 29:
+                        PermutationofString permution = new PermutationofString();
+                        permution.permutation();
+                        break;
+                    case 30:
+                        Max_min minmax = new Max_min();
+                        minmax.Max_MIn();
+                        break;
+
+                    case 31:
+                        VendingMachine VM = new VendingMachine();
+                        VM.vendingMachine();
+                        break;
+                    case 32:
+                        DayOfWeek DoW = new DayOfWeek();
+                        DoW.DayOfweek();
+                        break;
+                    case 33:
+                        FindDuplicateInTheArray Duplicate = new FindDuplicateInTheArray();
+                        Duplicate.findDuplicate();
+                        break;
+                    case 34:
+                        PrimeAnagram PerimeAnagram = new PrimeAnagram();
+                        PerimeAnagram.primeAnagram();
+                        break;
 
 
-                /* case 22:
-                     VendingMachine VM = new VendingMachine();
-                     VM.vendingMachine();
-                     break;
- */
-
-                default:
+                    default:
                         Console.WriteLine("You Choose Wrong Option");
-                    break;
-                }
-          
+                        break;
 
+
+                
+                }
+                Console.WriteLine("Do u Want To Continue Y/N");
+                input = Convert.ToChar(Console.ReadLine());
+            } while (input.Equals('Y') || input.Equals('y'));
 
 
 
