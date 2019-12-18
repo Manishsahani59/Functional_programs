@@ -10,13 +10,21 @@ namespace Functional_programs
         Utility utility = new Utility();
         public void gambler()
         {
-            Console.WriteLine("Enter the Stack");
-            int stack = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter the Goal");
-            int goal = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter the Trail");
-            int Trails = Convert.ToInt32(Console.ReadLine());
-            utility.Gambler(stack, goal, Trails);
+            try
+            {
+                Console.WriteLine("Enter the Stack");
+                int stack = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Enter the Goal");
+                int goal = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Enter the Trail");
+                int Trails = Convert.ToInt32(Console.ReadLine());
+                utility.Gambler(stack, goal, Trails);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Enter the valid Input");
+            }
+           
         }
 
     }

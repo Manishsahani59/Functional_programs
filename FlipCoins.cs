@@ -9,9 +9,23 @@ namespace Functional_programs
         Utility utility = new Utility();
         public void Flipcoins()
         {
+
+            bool falg = true;
             Console.WriteLine("Enter the Size up to you want to flip");
-            int Flip = Convert.ToInt32(Console.ReadLine());
-            utility.FlipCoins(Flip);
+
+            try
+            {
+                int Flip = Convert.ToInt32(Console.ReadLine());
+                utility.FlipCoins(Flip);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Please Enter the valid input");
+             }
+
+
+          
+
 
         }
 

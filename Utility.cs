@@ -74,19 +74,21 @@ public class Utility
     public static int collectMponey(int change, int[] rupees, int n, int money)
     {
 
-        if (change== 0)
+        if (change == 0)
             return money;
+          
         else
         {
-            if (change > rupees[n - 1])
+            if (change >= rupees[n - 1])
             {
-                change = change - rupees[n - 1];
+                change-=rupees[n - 1];
                 money++;
                 Console.WriteLine(rupees[n - 1]);
+                   
                 return collectMponey(change, rupees, n, money);
             } else
             {
-                n=n-1;
+                n-=1;
                return collectMponey(change, rupees, n, money);
             }
         }
@@ -508,7 +510,7 @@ public class Utility
     public static bool IsAnagram(string s1, string s2)
     {
         bool result=true;
-        if (s1.Length!= s2.Length)
+        if (s1.Length != s2.Length)
         {
             return false;
         }
@@ -516,10 +518,10 @@ public class Utility
         {
             char[] ch1 = s1.ToCharArray();
             char[] ch2 = s2.ToCharArray();
-             Array.Sort(ch1);
-              Array.Sort(ch2);
+            Array.Sort(ch1);
+            Array.Sort(ch2);
 
-            result=Array.Equals(ch1, ch1);
+            result = Array.Equals(ch1, ch2);
 
             return result;
         }
@@ -529,14 +531,14 @@ public class Utility
 
     //******************************************  End  Anagram Detection ******************************************/
 
-    //*****************************************  Start WindChill ******************************************/
-
-
-
-    //*****************************************  End WindChill ******************************************/
-
+    
     //*****************************************  Start Quadratic Equcation a*x*x+b*x+c=0 ******************************************/
-
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="a"></param>
+    /// <param name="b"></param>
+    /// <param name="c"></param>
     public static void quadratucequcation(int a,int b,int c)
     {
 
